@@ -1,0 +1,9 @@
+include: package:lint/analysis_options.yaml
+
+# Change error severity => Forget a return statement in a function should be red flaged
+analyzer:
+  errors:
+    missing_required_param: error
+    missing_return: error
+    must_be_immutable: error
+    sort_unnamed_constructors_first: ignore
