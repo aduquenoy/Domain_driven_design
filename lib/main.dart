@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:domainDrivenDesign/controller/auth_bloc.dart';
+import 'package:domainDrivenDesign/controller/auth/auth_bloc.dart';
 import 'package:domainDrivenDesign/injection.dart';
 import 'package:domainDrivenDesign/view/route/router.gr.dart';
 import 'package:flutter/material.dart';
