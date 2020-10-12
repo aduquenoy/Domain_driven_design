@@ -8,3 +8,5 @@ class UnexpectedValueError extends Error {
   @override
   String toString() => Error.safeToString("Encountered a ValueFailure at an unrecoverable point. Terminating. Falire was : $valueFailure");
 }
+
+class NotAuthenticatedError extends Error{}
