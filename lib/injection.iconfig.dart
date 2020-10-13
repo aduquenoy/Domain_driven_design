@@ -15,7 +15,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:domainDrivenDesign/controller/auth/sign_in_form/sign_in_form_bloc.dart';
 import 'package:domainDrivenDesign/controller/note/watcher/watcher_bloc.dart';
 import 'package:domainDrivenDesign/controller/note/actor/actor_bloc.dart';
-import 'package:domainDrivenDesign/controller/auth/auth_bloc.dart';
+import 'package:domainDrivenDesign/controller/auth/session/auth_bloc.dart';
+import 'package:domainDrivenDesign/controller/note/form/form_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 void $initGetIt(GetIt g, {String environment}) {
@@ -32,6 +33,7 @@ void $initGetIt(GetIt g, {String environment}) {
   g.registerFactory<WatcherBloc>(() => WatcherBloc(g<INoteRepository>()));
   g.registerFactory<ActorBloc>(() => ActorBloc(g<INoteRepository>()));
   g.registerFactory<AuthBloc>(() => AuthBloc(g<IAuthFacade>()));
+  g.registerFactory<FormBloc>(() => FormBloc(g<INoteRepository>()));
 }
 
 class _$FirebaseInjectableModule extends FirebaseInjectableModule {}
